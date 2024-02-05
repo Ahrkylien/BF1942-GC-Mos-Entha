@@ -12,12 +12,12 @@ rem max setViewDistance-50:
 renderer.fogend 1000
 
 renderer.globalLodPercent 1
-renderer.globalAmbientColor .5
+renderer.globalAmbientColor 0.42
 renderer.ambientColor 0
 rem renderer.diffuseColor .2/.2/.1
 rem diffuseColor: lightens the faces pointing to the sun
 rem not needed with proper lightmapping?
-renderer.diffuseColor 0
+renderer.diffuseColor 0.1
 renderer.specularColor 0.27/0.25/0.26
 renderer.animatedMeshDiffuseFactor 0.42/0.40/0.35
 renderer.animatedMeshAmbientColor 0.28
@@ -31,6 +31,7 @@ Game.spawnPlayers 1
 
 rem set fixed render settings:
 game.setDetailTexture 4
+rem lightmap settings get overwritten by the selected settings when the player exits the briefing menu..
 
 game.setTeamSkin 1 JapaneseSoldier
 game.setKit 1 0 Empire_Scout

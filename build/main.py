@@ -7,7 +7,7 @@ rfa = RefractorFlatArchive(f"{map_name}.rfa")
 rfa.addDirectory("../src")
 if not os.path.exists("client"):
     os.makedirs("client")
-# rfa.write(f"client{os.sep}{map_name}.rfa")
+rfa.write(f"client{os.sep}{map_name}.rfa")
 
 rfa.deleteAllNonServerFiles()
 if not os.path.exists("server"):
