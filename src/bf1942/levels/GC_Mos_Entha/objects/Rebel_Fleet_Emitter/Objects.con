@@ -7,8 +7,6 @@ NetworkableInfo.setBasePriority -1
 NetworkableInfo.createNewInfo Rebel_Fleet_x_wing_Info
 NetworkableInfo.setPredictionMode PMLinear
 
-ObjectTemplate.create SimpleObject alwaysRender
-
 ObjectTemplate.create ObjectSpawner Rebel_Fleet_Spawner
 ObjectTemplate.setObjectTemplate 0 Rebel_Fleet_Spawner_sub
 ObjectTemplate.MaxNrOfObjectSpawned 1

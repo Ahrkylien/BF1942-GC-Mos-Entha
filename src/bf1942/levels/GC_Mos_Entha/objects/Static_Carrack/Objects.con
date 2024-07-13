@@ -345,3 +345,39 @@ ObjectTemplate.spawnOffset 0/0/0
 ObjectTemplate.team 1
 ObjectTemplate.MaxNrOfObjectSpawned 1
 ObjectTemplate.damageWhenLost 10
+
+
+
+
+
+
+
+
+rem *** destroyer of carrack ***
+ObjectTemplate.create ObjectSpawner Static_Carrack_destroyer
+ObjectTemplate.setObjectTemplate 0 Static_Carrack_destroyer_bundle
+ObjectTemplate.MaxNrOfObjectSpawned 1
+ObjectTemplate.nrOfObjectToSpawn  1
+objectTemplate.spawnDelay 9999
+objectTemplate.spawnDelayAtStart 1
+ObjectTemplate.setTeam 0
+
+ObjectTemplate.create Bundle Static_Carrack_destroyer_bundle
+ObjectTemplate.networkableInfo Rebel_Fleet_x_wing_Info
+ObjectTemplate.geometry Big_Bomb_M1
+ObjectTemplate.addTemplate Static_Carrack_destroyer_buble
+
+
+ObjectTemplate.create SupplyDepot Static_Carrack_destroyer_buble
+ObjectTemplate.radius 200
+ObjectTemplate.team 0
+ObjectTemplate.workOnVehicles 1
+ObjectTemplate.workOnSoldiers 0
+objectTemplate.addVehicleType Static_Carrack -1 -9999 0
+objectTemplate.addVehicleType tiebomber -1 -9999 0
+objectTemplate.addVehicleType TieAdvanced -1 -9999 0
+objectTemplate.addVehicleType TieOppressor -1 -9999 0
+objectTemplate.addVehicleType tiefighter -1 -9999 0
+objectTemplate.addVehicleType TieInterceptor -1 -9999 0
+objectTemplate.addVehicleType alpha -1 -9999 0
+objectTemplate.addVehicleType Avenger -1 -9999 0

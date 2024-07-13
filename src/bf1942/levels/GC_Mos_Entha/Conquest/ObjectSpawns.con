@@ -26,6 +26,17 @@ object.create Rebel_Fleet_Spawner
 object.absolutePosition 0/300/0
 object.rotation 45/0/0
 
+
+
+
+ObjectTemplate.active Static_Carrack_destroyer
+objectTemplate.spawnDelay v_time_to_fleet_arival
+
+object.create Static_Carrack_destroyer
+object.absolutePosition 1702.987/359.9049/1659.7685
+object.rotation -35.5639/0/0
+
+
 beginrem
 ObjectTemplate.create ObjectSpawner CarSpawn
 ObjectTemplate.setObjectTemplate 0 Car

@@ -44,6 +44,7 @@ ObjectTemplate.TimeToLive 120
 ObjectTemplate.Distance 200
 ObjectTemplate.DamageWhenLost 20
 ObjectTemplate.MaxNrOfObjectSpawned 1
+ObjectTemplate.nrOfObjectToSpawn 1
 
 ObjectTemplate.create ObjectSpawner fighter1_spawner
 ObjectTemplate.setObjectTemplate 1 tiefighter
