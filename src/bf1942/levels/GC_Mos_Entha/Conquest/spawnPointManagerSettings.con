@@ -1,54 +1,15 @@
 spawnPointManager.group 1
 spawnPointManager.groupTeam 2
 spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 2
-spawnPointManager.groupTeam 2
-spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 3
-spawnPointManager.groupTeam 2
-spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 4
-spawnPointManager.groupTeam 2
-spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 5
-spawnPointManager.groupTeam 2
-spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 6
-spawnPointManager.groupTeam 2
-spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 7
-spawnPointManager.groupTeam 2
-spawnPointManager.groupEnableToChangeTeam 0
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
+spawnPointManager.groupPos 1807.5674/1157.1963/742.6592
 
 rem Extra for SSM:
 
-spawnPointManager.group 8
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
-spawnPointManager.group 9
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
-
 spawnPointManager.group 10
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
 
 spawnPointManager.group 11
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
 
 spawnPointManager.group 12
-spawnPointManager.groupPos 807.5674/157.1963/742.6592
 
 spawnPointManager.group 13
 
