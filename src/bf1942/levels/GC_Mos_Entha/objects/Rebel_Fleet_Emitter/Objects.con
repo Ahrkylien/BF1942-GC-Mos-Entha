@@ -26,11 +26,18 @@ ObjectTemplate.timetoliveafterdeath 0
 ObjectTemplate.hasCollisionPhysics 0
 ObjectTemplate.addTemplate Rebel_Fleet_Spawner_sub_sub
 ObjectTemplate.setPosition 0/0/0
-ObjectTemplate.setRotation 0/0/0
+ObjectTemplate.addTemplate Rebel_Fleet_Spawner_sub_sub
+ObjectTemplate.setPosition -10/0/-10
+ObjectTemplate.addTemplate Rebel_Fleet_Spawner_sub_sub
+ObjectTemplate.setPosition 10/0/-10
+ObjectTemplate.addTemplate Rebel_Fleet_Spawner_sub_sub
+ObjectTemplate.setPosition -20/0/-20
+ObjectTemplate.addTemplate Rebel_Fleet_Spawner_sub_sub
+ObjectTemplate.setPosition 20/0/-20
 
 ObjectTemplate.create ObjectSpawner Rebel_Fleet_Spawner_sub_sub
 ObjectTemplate.setObjectTemplate 0 Fake_x_wing
-ObjectTemplate.SpawnDelay 5
+ObjectTemplate.SpawnDelay 3
 ObjectTemplate.SpawnDelayAtStart 0
 ObjectTemplate.TimeToLive 120
 ObjectTemplate.Distance 200

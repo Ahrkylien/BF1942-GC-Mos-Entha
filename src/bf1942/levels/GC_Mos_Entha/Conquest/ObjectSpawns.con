@@ -1,6 +1,8 @@
 var v_time_to_game_end
 var v_time_to_fleet_arival = 99999
-var v_time_to_fleet_arival_before_end = 300
+var v_time_to_imp_fleet_destroyed = 99999
+var v_time_to_destroyed_from_arival = 30
+var v_time_to_fleet_arival_before_end = 120
 var v_time_to_fleet_arival_check = 0
 
 rem Ajust for map load time:
@@ -14,8 +16,12 @@ if v_time_to_game_end != 0
 	endif
 endif
 
+Utils.mathExprI v_time_to_fleet_arival + v_time_to_destroyed_from_arival -> v_time_to_imp_fleet_destroyed
+
 vars.set time_to_game_end v_time_to_game_end
 vars.set time_to_fleet_arival v_time_to_fleet_arival
+vars.set time_to_imp_fleet_destroyed v_time_to_imp_fleet_destroyed
+vars.set time_to_destroyed_from_arival v_time_to_destroyed_from_arival
 vars.set time_to_fleet_arival_before_end v_time_to_fleet_arival_before_end
 vars.set time_to_fleet_arival_check v_time_to_fleet_arival_check
 
@@ -26,15 +32,11 @@ object.create Rebel_Fleet_Spawner
 object.absolutePosition 0/300/0
 object.rotation 45/0/0
 
-
-
-
 ObjectTemplate.active Static_Carrack_destroyer
-objectTemplate.spawnDelay v_time_to_fleet_arival
+objectTemplate.spawnDelay v_time_to_imp_fleet_destroyed
 
 object.create Static_Carrack_destroyer
 object.absolutePosition 1702.987/359.9049/1659.7685
-object.rotation -35.5639/0/0
 
 
 beginrem
