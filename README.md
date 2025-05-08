@@ -4,6 +4,7 @@ To build the client and server RFAs run 'build/make.bat'. You will need the pyth
 # ToDos
 - Create lightmaps (create new blender file with proper lighting)
   - Fix some uv mappings if needed
+- Create terrain shadows (and a proper texture anyway)
 - Add more props
 - Add CTF mode
 
