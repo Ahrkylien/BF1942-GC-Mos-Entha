@@ -25,12 +25,18 @@ vars.set time_to_destroyed_from_arival v_time_to_destroyed_from_arival
 vars.set time_to_fleet_arival_before_end v_time_to_fleet_arival_before_end
 vars.set time_to_fleet_arival_check v_time_to_fleet_arival_check
 
+
+rem Rebel Fleet spawner at end of game
+
 ObjectTemplate.active Rebel_Fleet_Spawner
 objectTemplate.spawnDelay v_time_to_fleet_arival
 
 object.create Rebel_Fleet_Spawner
 object.absolutePosition 0/300/0
 object.rotation 45/0/0
+
+
+rem Static Carrack destroyer, which is an object that destroys the imperial fleet
 
 ObjectTemplate.active Static_Carrack_destroyer
 objectTemplate.spawnDelay v_time_to_imp_fleet_destroyed
@@ -39,125 +45,15 @@ object.create Static_Carrack_destroyer
 object.absolutePosition 1702.987/359.9049/1659.7685
 
 
-beginrem
-ObjectTemplate.create ObjectSpawner CarSpawn
-ObjectTemplate.setObjectTemplate 0 Car
-ObjectTemplate.minSpawnDelay 5
-ObjectTemplate.maxSpawnDelay 5
-ObjectTemplate.timeToLive 5
-ObjectTemplate.distance 512
-ObjectTemplate.spawnOffset 0/0/0
-ObjectTemplate.setTeam 0
-ObjectTemplate.maxNrOfObjectSpawned 1
-ObjectTemplate.damageWhenLost 25
-ObjectTemplate.radius 10
+rem Imperial fleet
 
-ObjectTemplate.create PlayerControlObject Car
-ObjectTemplate.geometry Big_Bomb_M1
-rem ObjectTemplate.setNetworkableInfo CarInfo
-rem ObjectTemplate.loadSoundScript Sounds/Car.ssc
-ObjectTemplate.saveInSeparateFile 1
-objectTemplate.cullRadiusScale 5
-ObjectTemplate.hasMobilePhysics 1
-ObjectTemplate.hasCollisionPhysics 1
-ObjectTemplate.hasResponsePhysics 1
-ObjectTemplate.hasDynamicShadow 1
-ObjectTemplate.explosionRadius 10
-ObjectTemplate.explosionDamage 20
-ObjectTemplate.explosionForceMod 0
-ObjectTemplate.explosionForceMax 0
-ObjectTemplate.damageFromWater 1
-ObjectTemplate.drag 2
-rem ObjectTemplate.mass 50000
-ObjectTemplate.mass 0.01
-ObjectTemplate.hasArmor 1
-ObjectTemplate.speedMod 0
-OBjectTemplate.damageMod 100
-ObjectTemplate.hitpoints 120
-ObjectTemplate.maxhitpoints 120
-ObjectTemplate.material 0
-ObjectTemplate.criticalDamage 20
-ObjectTemplate.hpLostWhileCriticalDamage 2
-ObjectTemplate.hpLostWhileUpSideDown 10
-ObjectTemplate.hpLostWhileDamageFromWater 5
-ObjectTemplate.timeToLiveAfterDeath 1
-ObjectTemplate.damageFromBeingOutSideWorld 0
-rem ObjectTemplate.addArmorEffect 0 e_scrapmetal_willy 0/1/0
-rem ObjectTemplate.addArmorEffect 0 e_ExplGas 0/1/0
-rem ObjectTemplate.addArmorEffect -1 WaterWaterExplosion 0/0/0
-ObjectTemplate.addToCollisionGroup c_CGStaticObjects
-ObjectTemplate.centerOfMassOffset 0/-1/0
-rem -------------------------------------
-ObjectTemplate.addTemplate CarBundle
-
-ObjectTemplate.create Bundle CarBundle
-rem ObjectTemplate.geometry Big_Bomb_M1
-ObjectTemplate.hasCollisionPhysics 1
-ObjectTemplate.hasResponsePhysics 1
-ObjectTemplate.hasDynamicShadow 1
-ObjectTemplate.addToCollisionGroup c_CGStaticObjects
-rem --------------------------------
-ObjectTemplate.addTemplate CarEngine
-rem ObjectTemplate.setPosition 0/-0.185/0
-ObjectTemplate.setPosition 0/0/-1
-rem ObjectTemplate.addTemplate Car_DeathBoxVehicles
-rem ObjectTemplate.addTemplate Car_DeathBoxSoldiers
-rem ObjectTemplate.addTemplate Car_SecondaryCollision
-
-ObjectTemplate.create Engine CarEngine
-rem ObjectTemplate.setNetworkableInfo CarEngineInfo
-ObjectTemplate.setAttachToListener 1
-ObjectTemplate.hasMobilePhysics 1
-ObjectTemplate.hasCollisionPhysics 1
-ObjectTemplate.hasResponsePhysics 1
-rem -------------------------------------
-rem ObjectTemplate.addTemplate CarWheel
-rem ObjectTemplate.setPosition 1.206/0.433/1.164
-rem ObjectTemplate.addTemplate CarWheel
-rem ObjectTemplate.setPosition -1.206/0.433/1.164
-rem ObjectTemplate.addTemplate CarWheel
-rem ObjectTemplate.setPosition 1.206/0.433/-1.415
-rem ObjectTemplate.addTemplate CarWheel
-rem ObjectTemplate.setPosition -1.206/0.433/-1.415
-rem -------------------------------------
-ObjectTemplate.setMinRotation 0/0/-1
-ObjectTemplate.setMaxRotation 0/0/1
-ObjectTemplate.setMaxSpeed 0/0/100
-ObjectTemplate.setAcceleration 0/0/1000
-ObjectTemplate.setAutomaticReset 1
-ObjectTemplate.setEngineType c_ETRocket
-rem ObjectTemplate.setTorque 2.5
-ObjectTemplate.setTorque 10
-ObjectTemplate.setDifferential 2
-rem ObjectTemplate.setDifferential 5
-ObjectTemplate.setNumberOfGears 1
-
-ObjectTemplate.create Spring CarWheel
-ObjectTemplate.setNetworkableInfo SpringInfo
-ObjectTemplate.geometry Big_Bomb_M1
-ObjectTemplate.hasMobilePhysics 1
-ObjectTemplate.hasCollisionPhysics 1
-ObjectTemplate.hasResponsePhysics 1
-ObjectTemplate.cullRadiusScale 5
-ObjectTemplate.grip c_PGFEngineGrip
-rem -------------------------------------
-ObjectTemplate.setStrength 30
-ObjectTemplate.setDamping 8
-
-object.create CarSpawn
-object.absolutePosition 734.4593/178.1963/641.8691
-object.rotation 180/0/0
-
-endrem
-
-rem imp fleet:
 object.create Carrack_spawner
 object.absolutePosition 1702.987/359.9049/1659.7685
 object.rotation -35.5639/0/0
 object.team 1
 
 
-
+rem Rebel Town
 
 object.create speeder2_spawner
 object.absolutePosition 736.9111/157.311/641.4935
@@ -168,7 +64,6 @@ object.create speeder2_spawner
 object.absolutePosition 757.5704/157.2307/768.606
 object.rotation 145.9963/0/0
 object.team 2
-
 
 object.create speeder1_spawner
 object.absolutePosition 721.8853/157.4328/681.9264
@@ -191,7 +86,7 @@ object.rotation -107.8297/0/0
 object.team 2
 
 
-
+rem Test fighters in town
 
 object.create fighter6_spawner
 object.absolutePosition 728.6214/158.1963/664.1431
@@ -211,7 +106,7 @@ object.team 4
 
 
 
-
+rem Test fighters bellow Carrack
 
 rem object.create Slave1
 rem object.absolutePosition 1627.8465/27.2637/1597.4904
