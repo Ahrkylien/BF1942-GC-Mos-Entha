@@ -1,8 +1,7 @@
-subshader "Building17_Material0" "StandardMesh/Default"
+subshader "material_0" "StandardMesh/Default"
 {
-	lighting true;
-	lightingSpecular false;
-	materialDiffuse 1.0 1.0 1.0;
 	texture "texture/Buildings/Tatooine/tat_stucco1";
+	materialDiffuse 1.0 1.0 1.0;
+	materialSpecular 1.0 1.0 1.0;
 }
 
